@@ -1,6 +1,8 @@
  let board = document.getElementById('board');
  let buttonAdd = document.getElementById('add');
- let inputAdd = document.getElementById('novaTarefa');
+ let inputNm = document.getElementById('NomePersonagem');
+ let UrlImg = document.getElementById('')
+
  let listaTarefas = []
 if(localStorage.getItem('listaTarefas')){
     listaTarefas = JSON.parse(localStorage.getItem('listaTarefas'))
@@ -12,30 +14,30 @@ if(localStorage.getItem('listaTarefas')){
  mostrarNaTela(listaTarefas);
 
 
- inputAdd.onkeypress = function(event){
+ inputNm.onkeypress = function(event){
     if (event.key == "Enter") {
-        let valorDigitado = inputAdd.value;
+        let valorDigitado = inputNm.value;
     listaTarefas.push(valorDigitado)
 
     gerarTarefa(valorDigitado, listaTarefas.length - 1)
 
     localStorage.setItem("listaTarefas", JSON.stringify(listaTarefas));
 
-    inputAdd.value = ""
+    inputNm.value = ""
 
     }
 }
 
  buttonAdd.onclick = function(){
 
-    let valorDigitado = inputAdd.value;
+    let valorDigitado = inputNm.value;
     listaTarefas.push(valorDigitado)
 
     gerarTarefa(valorDigitado, listaTarefas.length - 1)
 
     localStorage.setItem("listaTarefas", JSON.stringify(listaTarefas));
 
-    inputAdd.value = ""
+    inputNm.value = ""
 
  }
 
@@ -51,7 +53,7 @@ if(localStorage.getItem('listaTarefas')){
 
  function gerarTarefa(valorDigitado, posicao){
     let tarefa = document.createElement('div');
-    //<div>
+
     tarefa.setAttribute('class','tarefa');
     tarefa.setAttribute('posicao',posicao);
 
@@ -64,7 +66,7 @@ if(localStorage.getItem('listaTarefas')){
 
     let imgCheck = document.createElement('img');
     imgCheck.setAttribute('class','icon');
-    imgCheck.setAttribute('src','img/check.png');
+    imgCheck.setAttribute('src','img/erro.png');
 
     buttonCheck.appendChild(imgCheck);
 
@@ -87,7 +89,6 @@ if(localStorage.getItem('listaTarefas')){
 
     tarefa.appendChild(titulo);
     tarefa.appendChild(buttonCheck);
-
     board.appendChild(tarefa)
  }
 
