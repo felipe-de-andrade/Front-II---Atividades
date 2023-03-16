@@ -87,7 +87,6 @@ if(localStorage.getItem('listaTarefas')){
 
     tarefa.appendChild(titulo);
     tarefa.appendChild(buttonCheck);
-
     board.appendChild(tarefa)
  }
 
