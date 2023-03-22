@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>To Do List</title>
+    <title>Top Personagens</title>
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">To Do List</a>
+            <a class="navbar-brand" href="#">Top Personagens</a>
         </nav>
     </header>
     <main class="container">
@@ -33,6 +33,11 @@
                     <input type="text" id="NomePersonagem" placeholder="Nome Personagem" required>
                     <input type="text" id="DiscrPersonagem" placeholder="Descrição Personagem" required>
                     
+                    <label for="cars">Deseja Salvar esse card?</label>
+                    <select name="cars" id="confirmacao">
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
                 </div>
                 <div class="col-md-4 text-center">
                     <img src="img/add.png" class="icon" id="add">

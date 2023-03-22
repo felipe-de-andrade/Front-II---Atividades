@@ -3,6 +3,9 @@ let buttonAdd = document.getElementById("add");
 let inputNm = document.getElementById("NomePersonagem");
 let UrlImg = document.getElementById("UrlImg");
 let inputDisc = document.getElementById("DiscrPersonagem");
+let inputSalv = document.getElementById("confirmacao");
+
+console.log(inputSalv);
 
 //Verifica se já existe uma tarefa
 let listaTarefas = [];
@@ -30,7 +33,7 @@ inputNm.onkeypress = function (event) {
   }
 };
 
-// O Ato de apertar o botão gera
+// O Ato de apertar o botão gera o item + validação de campos.
 buttonAdd.onclick = function () {
   objeto = {
     nome: inputNm.value,
@@ -70,7 +73,7 @@ function gerarTarefa(valorDigitado, posicao) {
   let coluna = document.createElement("div");
   coluna.setAttribute("class", "col-md-8");
 
-  let titulo = document.createElement("h1");
+  let titulo = document.createElement("h2");
   titulo.textContent = valorDigitado.nome;
 
   let img = document.createElement("img");
