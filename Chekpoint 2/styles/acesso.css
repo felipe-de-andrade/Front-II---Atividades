@@ -89,3 +89,18 @@ button {
   align-items: center;
   justify-content: center;
 }
+
+label span#error-message {
+  background-color: rgba(255, 64, 64, 0.7);
+  border-color: rgb(152, 7, 7);
+}
+
+label span#senha{
+  background-color: rgba(255, 64, 64, 0.7);
+  border-color: rgb(152, 7, 7);
+}
+
+.erro{
+  background-color: rgba(255, 64, 64, 0.7);
+  border-color: rgb(152, 7, 7);
+}

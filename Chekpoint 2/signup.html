@@ -10,10 +10,6 @@
   <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
   <link rel="stylesheet" href="styles/acesso.css">
 
-  <!-- ---------------------- lógica aplicada no registro -------------------- -->
-  <script src="/scripts/utils.js"></script>
-  <script src="/scripts/signup.js"></script>
-
 </head>
 
 <body>
@@ -22,30 +18,35 @@
     <img src="./assets/pessoa-signup.png" alt="">
   </div>
   <div class="right">
-    <form>
+    <form id="form">
       <div class="form-header">
         <p>To-Do App</p>
       </div>
 
       <label>
         Nome:
-        <input type="text">
+        <input id="name"  type="text">
+        <span class="erro" id="name-error"></span>
       </label>
-      <label>
+      <label >
         Sobrenome:
-        <input type="text">
+        <input id="surname" type="text">
+        <span class="erro" id="last-name-error"></span>
       </label>
       <label>
         Email:
-        <input type="email">
+        <input id="email" type="email">
+        <span class="erro" id="email-error"></span>
       </label>
       <label>
         Senha:
-        <input type="password">
+        <input id="input-password" type="password">
+        <span class="erro" id="password-error"></span>
       </label>
       <label>
         Repetir senha:
-        <input type="password">
+        <input id="password-confirm" type="password">
+        <span class="erro" id="confirm-password-error"></span>
       </label>
 
       <button>Criar conta</button>
@@ -56,6 +57,10 @@
     </div>
   </div>
 
+
+    <!-- ---------------------- lógica aplicada no registro -------------------- -->
+  
+    <script src="scripts/singup.js"></script>
 </body>
 
 </html>
