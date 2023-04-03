@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do App</title>
+    <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
+    <link rel="stylesheet" href="styles/acesso.css" />
+  </head>
 
-  <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
-  <link rel="stylesheet" href="styles/acesso.css">
-
-
-
-</head>
-
-<body>
-  <div class="left">
-    <img src="./assets/pessoa-login.png" alt="">
-  </div>
-
-  <div class="right">
-    <form>
-      <div class="form-header">
-        <p>To-Do App</p>
-      </div>
-      <h1>Acessar</h1>
-      <label>
-        Email:
-        <input id="inputEmail" type="text">
-      </label>
-      <label>
-        Senha:
-        <input id="inputPassword" type="password">
-      </label>
-
-      <button type="submit" id="submit">Acessar</button>
-
-    </form>
-    <div class="ingressar">
-      <a href="signup.html">Não possui conta? Crie agora mesmo</a>
+  <body>
+    <div class="left">
+      <img src="./assets/pessoa-login.png" alt="" />
     </div>
-  </div>
 
-  <!-- ---------------------- lógica aplicada no login ----------------------- -->
-  <script src="/Chekpoint 2/scripts/login.js"></script>
-</body>
+    <div class="right">
+      <form id="form">
+        <div class="form-header">
+          <p>To-Do App</p>
+        </div>
+        <h1>Acessar</h1>
+        <label>
+          Email:
+          <input id="input-email" type="text" />
+          <span id="error-message"></span>
+        </label>
+        <label>
+          Senha:
+          <input id="input-password" type="password" />
+          <span id="senha"></span>
+        </label>
 
+        <button type="submit">Acessar</button>
+      </form>
+      <div class="ingressar">
+        <a href="signup.html">Não possui conta? Crie agora mesmo</a>
+      </div>
+    </div>
+
+    <!-- ---------------------- lógica aplicada no login ----------------------- -->
+    <script src="scripts/login.js"></script>
+  </body>
 </html>
