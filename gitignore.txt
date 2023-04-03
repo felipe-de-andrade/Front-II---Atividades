@@ -1,0 +1,11 @@
+{
+  "firstName": "Felipe",
+  "lastName": "Teste",
+  "email": "felipeteste@gmail.com",
+  "password": "12345678@asd9"
+}
+criar
+"jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZlbGlwZXRlc3RlQGdtYWlsLmNvbSIsImlkIjoyMDksImlhdCI6MTY4MDA0NDMyMn0.hPCYQzt1qsafQD7br8BPHnHWCd7FuCV-qmxK5e4Y5t8"
+
+login
+    "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZlbGlwZXRlc3RlQGdtYWlsLmNvbSIsImlkIjoyMDksImlhdCI6MTY4MDA0NTAwNn0.OKc5GPmn9iKbABRDPrPGR0QIPaiG-WAqwjDLIfmyaro"
