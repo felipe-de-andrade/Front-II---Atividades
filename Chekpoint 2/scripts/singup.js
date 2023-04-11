@@ -1,9 +1,17 @@
-// Obter os valores dos campos de formulário
-const nome = document.getElementById("name").value;
-const sobrenome = document.getElementById("surname").value;
-const email = document.getElementById("email").value;
+ // Obter os valores dos campos de formulário
+const nome = document.getElementById("name");
+const sobrenome = document.getElementById("surname");
+const email = document.getElementById("email");
 const senha = document.getElementById("input-password").value;
 const senhaconfirm = document.getElementById("password-confirm").value;
+const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/;
+const repetirSenha = document.getElementById("password-confirm");
+const erro = document.querySelector(".erro");
+const errorSenha = document.getElementById("senha");
+const inputSenha = document.getElementById("input-password");
+const inputEmail = document.getElementById("input-email");
+
 
 
 if (senha !== senhaconfirm) {
@@ -41,3 +49,64 @@ if (senha !== senhaconfirm) {
     console.error(error);
   });
 }
+
+//vaidação de formularios
+
+function validateName() {
+const nameError = document.getElementById('name-error');
+console.log('nome', nome.value)
+if (nome.value == '') {
+nameError.textContent = 'Nome é obrigatorio';
+} else {
+nameError.textContent = '';
+}
+}
+
+function validateLastName() {
+const lastNameError = document.getElementById('last-name-error');
+if (sobrenome.value == '') {
+lastNameError.textContent = 'Sobrenome é obrigatorio';
+} else {
+ lastNameError.textContent = '';
+}
+}
+
+function validateEmail() {
+  const emailError = document.getElementById('email-error');  
+  if (!email.checkValidity() || !emailRegex.test(email.value)) {
+    emailError.textContent = 'Porfavor, entre com um email valido';
+  } else {
+    emailError.textContent = '';
+  }
+}
+
+function validatePassword() {
+  const passwordError = document.getElementById('password-error');
+  if (inputSenha.value == '') {
+    passwordError.textContent = 'Senha é obrigatória.';
+  } else if (!passwordRegex.test(inputSenha.value)) {
+    passwordError.textContent = 'Senha muito fraca';
+  } else {
+    passwordError.textContent = '';
+  }
+}
+
+function validateConfirmPassword() {
+  const confirmPasswordError = document.getElementById('confirm-password-error');
+  if (repetirSenha.value === '') {
+    confirmPasswordError.textContent = 'Você precisa confirmar a senha ';
+  } else if (repetirSenha.value !== inputSenha.value) {
+    confirmPasswordError.textContent = 'Digite a mesma senha';
+  } else {
+    confirmPasswordError.textContent = '';
+  }
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  validateName();
+  validateLastName();
+  validateEmail();
+  validatePassword();
+  validateConfirmPassword();
+});
